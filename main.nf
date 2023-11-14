@@ -135,6 +135,6 @@ workflow {
         .set{ splitted_fasta }
 
     ASSIGN_IDTAXA(splitted_fasta, refbd)
-        .collectFile(keepHeader: true, skip: 1, storeDir: params.outdir, name: "taxores")
+        .collectFile(keepHeader: true, skip: 1, storeDir: params.outdir, name: "taxores_${params.refdb}")
 
 }
