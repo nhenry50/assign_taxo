@@ -11,10 +11,10 @@ process GET_REF {
 
     label 'process_low'
 
-    conda "r::r-tidyverse=1.2.1"
+    conda "bioconda::bioconductor-decipher=2.28.0"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/r-tidyverse:1.2.1' :
-        'biocontainers/r-tidyverse:1.2.1' }"
+        'https://depot.galaxyproject.org/singularity/bioconductor-decipher:2.28.0--r43ha9d7317_0' :
+        'biocontainers/bioconductor-decipher:2.28.0--r43ha9d7317_0' }"
 
     output:
     path("refdb.rds")
